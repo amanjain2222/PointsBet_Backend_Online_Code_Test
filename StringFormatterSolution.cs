@@ -8,7 +8,7 @@ namespace PointsBet_Backend_Online_Code_Test
     {
 
         //improved code
-        public static string ToCommaSeparatedList(string[] items, string quote)
+        public static string ToCommaSeparatedList(string[] items, string quote) // fixed typo
         {
             if (items == null || items.Length < 1) // error handling - checking for nulls and empty items
             {
