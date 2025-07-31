@@ -15,11 +15,16 @@ namespace PointsBet_Backend_Online_Code_Test
                 return string.Empty;
             }
 
-            StringBuilder qry = new StringBuilder(string.Format("{0}{1}{0}", quote, items[0])); // initialising qry 
+            StringBuilder qry = new StringBuilder(); // initialising qry 
 
-            for (int i = 1; i < items.Length; i++)
+            for (int i = 0; i < items.Length; i++)
             {
-                qry.Append(string.Format(", {0}{1}{0}", quote, items[i])); // appending subsiquent items to the string
+                if (i > 0)
+                {
+                    qry.Append(", ");  // universal comma logic
+                }
+
+                qry.Append(string.Format("{0}{1}{0}", quote, items[i])); // appending subsiquent items to the string
             }
 
             return qry.ToString(); 
